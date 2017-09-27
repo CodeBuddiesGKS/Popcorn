@@ -1,0 +1,59 @@
+<!-- Jumbotron -->
+<div class="jumbotron">
+  <h2>{{model.movie.title + " (" + model.movie.titleYear + ")"}}</h2>
+  <div class="width: 100%; white-space: nowrap;">
+    <img class="media-object" style="float: none; display: inline;" src="http://placehold.it/200x300" width="27%">
+    <img class="media-object" style="float: none; display: inline;" src="http://placehold.it/533x300" width="72%">
+  </div>
+</div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" ng-init="selectedTab = 1;">
+  <li role="presentation" ng-class="{active: selectedTab==1}" data-target="cast" data-toggle="tab">
+    <a ng-click="selectedTab = 1;" ng-link="['Cast']">Cast</a>
+  </li>
+  <li role="presentation" ng-class="{active: selectedTab==2}" data-target="reviews" data-toggle="tab">
+    <a ng-click="selectedTab = 2;" ng-link="['Reviews']">Reviews</a>
+  </li>
+  <li role="presentation" ng-class="{active: selectedTab==3}" data-target="videos" data-toggle="tab">
+    <a ng-click="selectedTab = 3;" ng-link="['Videos']">Videos</a>
+  </li>
+  <li role="presentation" ng-class="{active: selectedTab==4}" data-target="pictures" data-toggle="tab">
+    <a ng-click="selectedTab = 4;" ng-link="['Pictures']">Pictures</a>
+  </li>
+  <li role="presentation" ng-class="{active: selectedTab==5}" data-target="info" data-toggle="tab">
+    <a ng-click="selectedTab = 5;" ng-link="['Info']">Info</a>
+  </li>
+  <li role="presentation" ng-class="{active: selectedTab==6}" data-target="synopsis" data-toggle="tab">
+    <a ng-click="selectedTab = 6;" ng-link="['Synopsis']">Synopsis</a>
+  </li>
+  <li role="presentation" class="dropdown" ng-class="{active: selectedTab>=7}">
+    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      Extras <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a ng-click="selectedTab = 7;" ng-link="['Trivia']">Trivia</a></li>
+      <li><a ng-click="selectedTab = 8;" ng-link="['Bloopers']">Bloopers</a></li>
+      <li><a ng-click="selectedTab = 9;" ng-link="['Quotes']">Quotes</a></li>
+      <li><a ng-click="selectedTab = 10;" ng-link="['FAQ']">FAQ</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <ng-outlet></ng-outlet>
+</div>
+
+<!-- Tab panes -->
+<!-- <div class="tab-content">
+  <div role="tabpanel" class="tab-pane" id="cast" ng-if="selectedTab == 1">cast</div>
+  <div role="tabpanel" class="tab-pane" id="reviews" ng-if="selectedTab == 2">reviews</div>
+  <div role="tabpanel" class="tab-pane" id="videos" ng-if="selectedTab == 3">videos</div>
+  <div role="tabpanel" class="tab-pane" id="pictures" ng-if="selectedTab == 4">pictures</div>
+  <div role="tabpanel" class="tab-pane" id="info" ng-if="selectedTab == 5">info</div>
+  <div role="tabpanel" class="tab-pane" id="synopsis" ng-if="selectedTab == 6">synopsis</div>
+  <div role="tabpanel" class="tab-pane" id="trivia" ng-if="selectedTab == 7">trivia</div>
+  <div role="tabpanel" class="tab-pane" id="bloopers" ng-if="selectedTab == 8">bloopers</div>
+  <div role="tabpanel" class="tab-pane" id="quotes" ng-if="selectedTab == 9">quotes</div>
+  <div role="tabpanel" class="tab-pane" id="faq" ng-if="selectedTab == 10">faq</div>
+</div> -->

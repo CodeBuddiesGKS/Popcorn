@@ -1,0 +1,59 @@
+.movie-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+}
+
+.movie-heading {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.movie-summary {
+    margin-top: 5px;
+}
+
+.movie-details {
+    padding-top: 5px;
+}
+.movie-details>.separator {
+    margin: 0 1em;
+    color: #6b6b6b
+}
+
+.star-box {
+    padding: 5px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+.star-box>.separator {
+    margin: 0 0.5em;
+    color: lightgrey;
+}
+
+.star-gold {
+    color: gold;
+}
+
+.star-outline {
+    color: lightgrey;
+}
+
+.star-hovered {
+    color: lightseagreen;
+}
+
+.polkadot {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+}

@@ -1,0 +1,32 @@
+<div class="row movie-item">
+  <div class="col-xs-12">
+    <div class="media">
+      <div class="media-left">
+        <a ng-link="['Details', {id: movie.id}, 'Cast']">
+          <img class="media-object" src="http://placehold.it/100x150">
+        </a>
+      </div>
+
+      <div class="media-body">
+        <h3 class="movie-heading">
+          <a ng-link="['Details', {id: movie.id}, 'Cast']">{{movie.title + " (" + movie.titleYear + ")"}}</a>
+        </h3>
+        <movie-stars value="movie.stars" max="10" set-stars="setStars({movie: movie, value: value})"></movie-stars>
+        <span class="btn-group" style="margin-left: 15px;">
+          <button class="btn btn-danger btn-xs" ng-click="downVote({movie: movie})"><i class="fa fa-thumbs-down"></i></button>
+          <button class="btn btn-success btn-xs" ng-click="upVote({movie: movie})"><i class="fa fa-thumbs-up"></i></button>
+        </span>
+        <p class="movie-summary">{{movie.summary}}</p>
+        <button class="btn btn-primary btn-sm" ng-click="goTo({movieId: movie.id})">More</button>
+      </div>
+    </div>
+
+    <div class="movie-details">
+      {{movie.rating}}
+      <span class="separator">|</span>
+      {{movie.length}} min
+      <span class="separator">|</span>
+      {{movie.genre | spaceout}}
+    </div>
+  </div>
+</div>

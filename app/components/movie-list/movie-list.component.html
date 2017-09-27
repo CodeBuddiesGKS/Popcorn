@@ -1,0 +1,21 @@
+<h2>Movie List</h2>
+
+<movie-list-item
+  movie="movie"
+  down-vote="model.downVote(movie)"
+  up-vote="model.upVote(movie)"
+  set-stars="model.setStars(movie, value)"
+  go-to="model.goTo(movieId)"
+  ng-repeat="movie in model.movies">
+</movie-list-item>
+
+<accordian>
+  <accordian-panel heading="Panel 1">
+    This is accordian panel 1.
+  </accordian-panel>
+  <accordian-panel heading="Panel 2">
+    This is accordian panel 2.
+  </accordian-panel>
+</accordian>
+
+<span draggable>Drag Me!!!</span>

@@ -1,0 +1,11 @@
+<span class="star-box">
+    <span ng-repeat="star in model.stars track by $index">
+        <i class="glyphicon glyphicon-star"
+           ng-class="model.starClass($index)"
+           ng-click="model.setStars({value: $index + 1})"
+           ng-mouseenter="model.starHovered = $index"
+           ng-mouseleave="model.starHovered = -1"></i>
+    </span>
+    <span class="separator">|</span>
+    <span style="color: darkgoldenrod; font-weight: bold;">{{model.value}} / 10</span>
+</span>
